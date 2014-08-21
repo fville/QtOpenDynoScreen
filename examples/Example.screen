@@ -1,0 +1,112 @@
+<!DOCTYPE OpenDynoScreen>
+<OpenDynoScreen Size="510, 585">
+ <Controls>
+  <Control Type="QPushButton" Font="MS Shell Dlg 2, 8, 50, 0" Name="button1" Size="75, 23" Location="7, 12"/>
+  <Control Type="QLineEdit" Font="MS Shell Dlg 2, 8, 50, 0" Name="textbox1" Size="133, 20" Location="101, 14"/>
+  <Control Type="ManoMeter" Font="MS Shell Dlg 2, 8, 50, 0" Name="manometer1" Size="183, 184" Location="283, 262"/>
+  <Control Type="ThermoMeter" Font="MS Shell Dlg 2, 8, 50, 0" Name="thermometer1" Size="70, 200" Location="193, 250"/>
+  <Control Type="PotentioMeter" Font="MS Shell Dlg 2, 8, 50, 0" Name="potentiometer1" Size="117, 108" Location="25, 255"/>
+  <Control Type="QLCDNumber" Font="MS Shell Dlg 2, 8, 50, 0" Name="lcd1" Size="120, 63" Location="-1, 379"/>
+  <Control Type="Counter" Font="MS Shell Dlg 2, 8, 50, 0" Name="counter1" Size="172, 68" Location="164, 94"/>
+  <Control Type="QLedIndicator" Font="MS Shell Dlg 2, 8, 50, 0" Name="led1" Size="64, 81" Location="128, 371"/>
+  <Control Type="PotentioMeter" Font="MS Shell Dlg 2, 8, 50, 0" Name="potentiometer2" Size="120, 120" Location="21, 67"/>
+ </Controls>
+ <Script><![CDATA[//Description:
+//	The following example demonstrates how to interact with screen widgets
+//	The two potentiometers and the pushbutton act as controls and the other 
+//	widgets on the screen are indicators
+//
+//Author:	Tony Fountaine
+//Date:	Jan 9, 2014
+
+var init =0;
+var obj =0;
+
+function Initialize()
+{
+	//debugger;
+	init =1;
+	Connect_Signals_Slots()
+}
+
+function UnInitialize()
+{
+	Disconnect_Signals_Slots()
+}
+
+//This allows the controls on the screen to react to events such as a click
+function Connect_Signals_Slots()
+{
+	screen.button1.clicked.connect(clicked);
+	screen.potentiometer1.valueInc.connect(IncValue);
+	screen.potentiometer1.valueDec.connect(DecValue);
+	screen.potentiometer2.valueInc.connect(CountUp);
+	screen.potentiometer2.valueDec.connect(CountDown);	
+}
+
+function Disconnect_Signals_Slots()
+{
+	//If the script previously initialized then the slots must be connected.......
+	if(init ==1)
+	{
+		try
+		{
+			screen.button1.clicked.disconnect(clicked);
+			screen.potentiometer1.valueInc.disconnect(IncValue);
+			screen.potentiometer1.valueDec.disconnect(DecValue);
+			screen.potentiometer2.valueInc.disconnect(CountUp);
+			screen.potentiometer2.valueDec.disconnect(CountDown);			
+		}
+		catch(err)
+		{
+			util.MessageBox(err);
+		}			
+	}
+}
+
+
+//The function clicked is called when the pushbutton is clicked
+var count = 0;
+function clicked()
+{
+	count++; 
+	screen.textbox1.text = "Clicked " + count + " times.";
+}
+
+
+//One the following two functions are called when potentiometer1 rotates
+function IncValue()
+{
+	screen.thermometer1.value +=1;
+	var value = screen.thermometer1.value;
+	screen.manometer1.value = value;
+	screen.lcd1.display(value);
+	if(value >29 && value < 60) screen.led1.setChecked(true);
+	else screen.led1.setChecked(false);
+}
+
+function DecValue()
+{
+	screen.thermometer1.value -=1;
+	var value = screen.thermometer1.value;
+	screen.manometer1.value = value;
+	screen.lcd1.display(value);
+	if(value >29 && value < 60) screen.led1.setChecked(true);
+	else screen.led1.setChecked(false);
+}
+
+
+//One the following two functions are called when potentiometer2 rotates
+var counter =0;
+function CountUp()
+{
+	counter +=1;
+	screen.counter1.value = counter;
+}
+
+function CountDown()
+{
+	counter -=1;
+	screen.counter1.value = counter;
+}]]></Script>
+</OpenDynoScreen>

@@ -1,0 +1,87 @@
+<RCC>
+    <qresource prefix="/MainWindow">
+        <file>Images/CodeWindowSelect16.png</file>
+        <file>Images/CodeWindowSharp16.png</file>
+        <file>Images/ComputerMonitorDisplay.ico</file>
+        <file>Images/ComputerMonitorDisplayEdit16.png</file>
+        <file>Images/Copy16.png</file>
+        <file>Images/DatabaseIndex16.png</file>
+        <file>Images/documentopen16.png</file>
+        <file>Images/games-config-background.png</file>
+        <file>Images/GaugeEdit16.png</file>
+        <file>Images/go-next-view.png</file>
+        <file>Images/insert-image-2.png</file>
+        <file>Images/media-playback-start-3.png</file>
+        <file>Images/media-playback-start-8.png</file>
+        <file>Images/media-playback-stop-8.png</file>
+        <file>Images/MonitorPoint.png</file>
+        <file>Images/Paste16.png</file>
+        <file>Images/Point.png</file>
+        <file>Images/run-build-2.png</file>
+        <file>Images/Settings.ico</file>
+        <file>Images/Settings16.png</file>
+        <file>Images/WindowCascadeUpArrow16.png</file>
+        <file>Images/WindowMasterDetail16.png</file>
+        <file>Images/Alert16.png</file>
+        <file>Images/align-horizontal-center-2.png</file>
+        <file>Images/align-horizontal-left.png</file>
+        <file>Images/align-horizontal-right-2.png</file>
+        <file>Images/align-vertical-bottom-2.png</file>
+        <file>Images/align-vertical-center-2.png</file>
+        <file>Images/align-vertical-top-2.png</file>
+        <file>Images/AutomotiveRightArrow.ico</file>
+        <file>Images/AutomotiveRightArrow16.png</file>
+        <file>Images/Cancel16.png</file>
+        <file>Images/ChartLineDelete16.png</file>
+        <file>Images/ChartLineOut16.png</file>
+        <file>Images/ChartLineUpArrow16.png</file>
+        <file>Images/ClientToServerRun16.png</file>
+        <file>Images/ClientToServerStop16.png</file>
+        <file>Images/code-context.png</file>
+        <file>Images/document-export.png</file>
+        <file>Images/document-open-4_16.png</file>
+        <file>Images/edit-redo-2.png</file>
+        <file>Images/Enable16.png</file>
+        <file>Images/Explore Classic16.png</file>
+        <file>Images/EyeScan.ico</file>
+        <file>Images/format-list-unordered.png</file>
+        <file>Images/go-next-9.png</file>
+        <file>Images/kalarm.ico</file>
+        <file>Images/kalarm.png</file>
+        <file>Images/klipper_dock.ico</file>
+        <file>Images/Lock16.png</file>
+        <file>Images/LockRestricted16.png</file>
+        <file>Images/media-playback-pause-8.png</file>
+        <file>Images/Move Next (Arrow) Yellow16.png</file>
+        <file>Images/Refresh Green16.png</file>
+        <file>Images/Remove (Delete) Black16.png</file>
+        <file>Images/SignalTowerRun16.png</file>
+        <file>Images/system-standby.png</file>
+        <file>Images/Undo Black16.png</file>
+        <file>Images/Unlock16.png</file>
+    </qresource>
+    <qresource prefix="/controls">
+        <file>Images/Controls/BarGauge.png</file>
+        <file>Images/Controls/Button.png</file>
+        <file>Images/Controls/DialGauge.png</file>
+        <file>Images/Controls/Graph.png</file>
+        <file>Images/Controls/Label.png</file>
+        <file>Images/Controls/LED.png</file>
+        <file>Images/Controls/Point.png</file>
+        <file>Images/Controls/PushButton.png</file>
+        <file>Images/Controls/Switch.png</file>
+        <file>Images/Controls/tab-close-other.png</file>
+        <file>Images/Controls/Table.png</file>
+        <file>Images/Controls/tab-new-background.png</file>
+        <file>Images/Controls/TextBox.png</file>
+        <file>Images/Controls/Thermometer.png</file>
+        <file>Images/Controls/view-list-details-4.ico</file>
+        <file>Images/Controls/view-list-details-4.png</file>
+        <file>Images/Controls/view-list-text-2.ico</file>
+        <file>Images/Controls/view-list-text-2.png</file>
+        <file>Images/Controls/view-nofullscreen.ico</file>
+        <file>Images/Controls/view-nofullscreen.png</file>
+        <file>Images/Controls/view-nofullscreen-3.png</file>
+        <file>Images/Controls/view-process-all.png</file>
+    </qresource>
+</RCC>

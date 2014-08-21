@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>925</width>
+    <height>387</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Images.qrc">
+    <normaloff>:/MainWindow/Images/ComputerMonitorDisplayEdit16.png</normaloff>:/MainWindow/Images/ComputerMonitorDisplayEdit16.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Screen</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QWidget" name="screen" native="true">
+          <property name="palette">
+           <palette>
+            <active>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>97</red>
+                <green>97</green>
+                <blue>97</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>97</red>
+                <green>97</green>
+                <blue>97</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>97</red>
+                <green>97</green>
+                <blue>97</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>97</red>
+                <green>97</green>
+                <blue>97</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <widget class="QLabel" name="label">
+           <property name="geometry">
+            <rect>
+             <x>110</x>
+             <y>110</y>
+             <width>361</width>
+             <height>111</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>&lt;b&gt;Qt Screen Editor Demo &lt;/b&gt;
+&lt;br&gt;
+&lt;br&gt;
+This is a proof of concept of how to create a screen editor in Qt.
+&lt;br&gt;
+&lt;br&gt;
+To add items to the screen click the buttons on the tool bar.
+&lt;br&gt;
+&lt;br&gt;
+To move or resize items select edit mode and then draw a rubber band around the item/s.
+</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Script</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2"/>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>XML</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3"/>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionEdit_Mode"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionDelete"/>
+   <addaction name="actionCall_Script"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/MainWindow/Images/document-open-4_16.png</normaloff>:/MainWindow/Images/document-open-4_16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionEdit_Mode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/MainWindow/Images/Lock16.png</normaloff>
+     <normalon>:/MainWindow/Images/Unlock16.png</normalon>:/MainWindow/Images/Lock16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Edit Mode</string>
+   </property>
+   <property name="toolTip">
+    <string>Puts the screen into edit mode</string>
+   </property>
+  </action>
+  <action name="actionSlider">
+   <property name="text">
+    <string>Slider</string>
+   </property>
+  </action>
+  <action name="actionDial">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/controls/Images/Controls/DialGauge.png</normaloff>:/controls/Images/Controls/DialGauge.png</iconset>
+   </property>
+   <property name="text">
+    <string>Dial</string>
+   </property>
+  </action>
+  <action name="actionPushButton">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/controls/Images/Controls/Button.png</normaloff>:/controls/Images/Controls/Button.png</iconset>
+   </property>
+   <property name="text">
+    <string>PushButton</string>
+   </property>
+  </action>
+  <action name="actionLCD">
+   <property name="text">
+    <string>LCD</string>
+   </property>
+  </action>
+  <action name="actionLabel">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/controls/Images/Controls/Label.png</normaloff>:/controls/Images/Controls/Label.png</iconset>
+   </property>
+   <property name="text">
+    <string>Label</string>
+   </property>
+  </action>
+  <action name="actionSpinBox">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/controls/Images/Controls/Point.png</normaloff>:/controls/Images/Controls/Point.png</iconset>
+   </property>
+   <property name="text">
+    <string>SpinBox</string>
+   </property>
+  </action>
+  <action name="actionTextbox">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/controls/Images/Controls/TextBox.png</normaloff>:/controls/Images/Controls/TextBox.png</iconset>
+   </property>
+   <property name="text">
+    <string>Textbox</string>
+   </property>
+  </action>
+  <action name="actionLED">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/controls/Images/Controls/PushButton.png</normaloff>:/controls/Images/Controls/PushButton.png</iconset>
+   </property>
+   <property name="text">
+    <string>LED</string>
+   </property>
+  </action>
+  <action name="actionMeter">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/controls/Images/Controls/Graph.png</normaloff>:/controls/Images/Controls/Graph.png</iconset>
+   </property>
+   <property name="text">
+    <string>Meter</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="icon">
+    <iconset theme="kkk" resource="Images.qrc">
+     <normaloff>:/MainWindow/Images/Cancel16.png</normaloff>
+     <normalon>:/MainWindow/Images/media-playback-start-8.png</normalon>:/MainWindow/Images/Cancel16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionAlign_Lefts">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/MainWindow/Images/align-horizontal-left.png</normaloff>:/MainWindow/Images/align-horizontal-left.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align Lefts</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/MainWindow/Images/document-export.png</normaloff>:/MainWindow/Images/document-export.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/MainWindow/Images/Copy16.png</normaloff>:/MainWindow/Images/Copy16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/MainWindow/Images/Paste16.png</normaloff>:/MainWindow/Images/Paste16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Paste</string>
+   </property>
+  </action>
+  <action name="actionCall_Script">
+   <property name="icon">
+    <iconset resource="Images.qrc">
+     <normaloff>:/MainWindow/Images/Refresh Green16.png</normaloff>:/MainWindow/Images/Refresh Green16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reload Script</string>
+   </property>
+  </action>
+  <action name="actionManometer">
+   <property name="text">
+    <string>Manometer</string>
+   </property>
+  </action>
+  <action name="actionThermometer">
+   <property name="text">
+    <string>Thermometer</string>
+   </property>
+  </action>
+  <action name="actionCounter">
+   <property name="text">
+    <string>Counter</string>
+   </property>
+  </action>
+  <action name="actionPotentiometer">
+   <property name="text">
+    <string>Potentiometer</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
